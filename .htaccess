@@ -1,0 +1,5 @@
+# Block direct web access to everything except webhook.php and admin/
+Options -Indexes
+<FilesMatch "^(config(\.sample)?\.php|schema\.sql|README\.md|.*\.log)$">
+  Require all denied
+</FilesMatch>
