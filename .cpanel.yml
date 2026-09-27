@@ -1,0 +1,6 @@
+---
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home/lupruhrv/public_html/messenger/
+    - /bin/mkdir -p $DEPLOYPATH
+    - /usr/bin/rsync -a --exclude=.git --exclude=.cpanel.yml ./ $DEPLOYPATH
