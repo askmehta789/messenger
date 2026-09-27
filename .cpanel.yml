@@ -3,4 +3,5 @@ deployment:
   tasks:
     - export DEPLOYPATH=/home/lupruhrv/luprah.site/
     - /bin/mkdir -p $DEPLOYPATH
-    - /usr/bin/rsync -a --exclude=.git --exclude=.cpanel.yml ./ $DEPLOYPATH
+    - /usr/bin/rsync -rlt --no-perms --no-owner --no-group --exclude=.git --exclude=.cpanel.yml ./ $DEPLOYPATH
+    - /bin/chmod 0755 $DEPLOYPATH
